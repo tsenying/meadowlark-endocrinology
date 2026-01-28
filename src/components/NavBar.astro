@@ -1,0 +1,64 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '' } = Astro.props;
+
+const navLinks = [
+  { href: '/', label: 'Why Choose Us' },
+  { href: '/about-membership', label: 'About Membership' },
+  { href: '/become-a-member', label: 'Become a Member' },
+];
+
+const portalUrl = 'https://portal.praxisemr.com';
+---
+
+<nav class="bg-accent text-white" aria-label="Main navigation">
+  <div class="container mx-auto px-4">
+    <ul class="flex flex-wrap items-center justify-center md:justify-start gap-1 md:gap-2 py-2">
+      {navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class:list={[
+              'block px-4 py-2 rounded-md transition-colors font-medium',
+              currentPath === link.href
+                ? 'bg-primary text-white'
+                : 'hover:bg-accent-light',
+            ]}
+            aria-current={currentPath === link.href ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+      <li class="md:ml-auto">
+        <a
+          href={portalUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-dark rounded-md transition-colors font-medium"
+        >
+          Current Patient
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            />
+          </svg>
+          <span class="sr-only">(opens in new tab)</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

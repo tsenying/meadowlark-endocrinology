@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary colors - Orange */
+  --color-primary: #fc6f03;
+  --color-primary-dark: #a34802;
+  --color-primary-light: #fa974b;
+
+  /* Accent colors - Blue */
+  --color-accent: #5279b7;
+  --color-accent-light: #7f93b3;
+
+  /* Background colors */
+  --color-background: #f8f9fa;
+  --color-background-light: #ffffff;
+
+  /* Font family */
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
