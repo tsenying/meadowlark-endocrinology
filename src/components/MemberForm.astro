@@ -25,7 +25,10 @@
         id="name"
         name="name"
         required
+        minlength="2"
+        maxlength="100"
         autocomplete="name"
+        title="Please enter your full name"
         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
       />
     </div>
@@ -39,7 +42,10 @@
         id="street-address"
         name="street-address"
         required
+        minlength="5"
+        maxlength="100"
         autocomplete="address-line1"
+        title="Please enter your street address"
         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
       />
     </div>
@@ -52,6 +58,7 @@
         type="text"
         id="street-address-2"
         name="street-address-2"
+        maxlength="50"
         autocomplete="address-line2"
         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
       />
@@ -67,7 +74,11 @@
           id="city"
           name="city"
           required
+          minlength="2"
+          maxlength="50"
+          pattern="[A-Za-z\s\-'.]{2,50}"
           autocomplete="address-level2"
+          title="Please enter a valid city name"
           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
         />
       </div>
@@ -147,9 +158,13 @@
           id="zip"
           name="zip"
           required
+          minlength="5"
+          maxlength="10"
           autocomplete="postal-code"
           pattern="[0-9]{5}(-[0-9]{4})?"
           placeholder="12345"
+          title="Please enter a valid ZIP code (12345 or 12345-6789)"
+          inputmode="numeric"
           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
         />
       </div>
@@ -164,7 +179,12 @@
         id="phone"
         name="phone"
         required
+        minlength="10"
+        maxlength="20"
         autocomplete="tel"
+        pattern="[\d\s\-\(\)\+]{10,20}"
+        placeholder="(555) 123-4567"
+        title="Please enter a valid phone number"
         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
       />
     </div>
@@ -178,7 +198,11 @@
         id="email"
         name="email"
         required
+        maxlength="100"
         autocomplete="email"
+        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        placeholder="you@example.com"
+        title="Please enter a valid email address"
         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
       />
     </div>
@@ -191,6 +215,7 @@
         id="patient-specifics"
         name="patient-specifics"
         rows="4"
+        maxlength="2000"
         placeholder="Tell us about your health concerns, current conditions, or what you're hoping to achieve with our care..."
         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition-colors resize-y"
       ></textarea>
