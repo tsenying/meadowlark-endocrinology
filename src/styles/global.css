@@ -2,17 +2,19 @@
 
 @theme {
   /* Primary colors - Orange */
-  --color-primary: #fc6f03;
-  --color-primary-dark: #a34802;
-  --color-primary-light: #fa974b;
+  --color-primary: #8FAF9A;
+  --color-primary-dark: #6e8f7a;
+  --color-primary-light: #b7cfc1;
 
   /* Accent colors - Blue */
-  --color-accent: #5279b7;
-  --color-accent-light: #7f93b3;
+  --color-accent: #d8b86a;
+  --color-accent-dark: #b89a4f;
+  --color-accent-light: #e8d7a4;
 
   /* Background colors */
-  --color-background: #f8f9fa;
-  --color-background-light: #ffffff;
+  --color-background: #f6f4ee;
+  --color-background-dark: #e8e5db;
+  --color-background-light: #fbfaf7;
 
   /* Font family */
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
